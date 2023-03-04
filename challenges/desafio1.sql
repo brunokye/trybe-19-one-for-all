@@ -47,21 +47,22 @@ INSERT INTO album (nome, artista_id) VALUES
 CREATE TABLE cancao (
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(50) NOT NULL,
+  duracao DECIMAL(10,2) NOT NULL,
   album_id INT NOT NULL,
   FOREIGN KEY (album_id) REFERENCES album(id)
 );
 
-INSERT INTO cancao (nome, album_id) VALUES
-('BREAK MY SOUL', 1),
-('VIRGO''S GROOVE', 1),
-('ALIEN SUPERSTAR', 1),
-('Don''t Stop Me Now', 2),
-('Under Pressure', 3),
-('Como Nossos Pais', 4),
-('O Medo de Amar é o Medo de Ser Livre', 5),
-('Samba em Paris', 6),
-('The Bard''s Song', 7),
-('Feeling Good', 8);
+INSERT INTO cancao (nome, duracao, album_id) VALUES
+('BREAK MY SOUL', 4.65, 1),
+('VIRGO''S GROOVE', 6.15, 1),
+('ALIEN SUPERSTAR', 1.93, 1),
+('Don''t Stop Me Now', 3.38, 2),
+('Under Pressure', 2.53, 3),
+('Como Nossos Pais', 1.75, 4),
+('O Medo de Amar é o Medo de Ser Livre', 3.45, 5),
+('Samba em Paris', 4.45, 6),
+('The Bard''s Song', 4.07, 7),
+('Feeling Good', 1.67, 8);
 
 CREATE TABLE pessoa_usuaria (
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
