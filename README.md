@@ -26,10 +26,10 @@ Instale as dependências
   npm install
 ```
 
-Inicie o projeto
+Abra o projeto
 
 ```bash
-  npm run start
+  code .
 ```
 
 ## Tecnologias
